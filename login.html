@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <form action="main.html" id="signup" onsubmit="return validation()">
+
+            <div class="header">
+
+                <h3>Sign Up</h3>
+
+                <p>You want to fill out this form</p>
+
+            </div>
+
+            <div class="sep"></div>
+
+            <div class="inputs">
+
+                <input type="name" id="username" placeholder="username" />
+                <br>
+                <input type="password" id="pswd" placeholder="password" />
+                <div class="checkboxy">
+
+
+                </div>
+
+
+                <button class="button" id="submit">login</button>
+
+            </div>
+        </form>
+        <script>
+            function validation() {
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("pswd").value;
+                if (username == "") {
+                    return false;
+                }
+                if (password == "") {
+                    return false;
+                }
+                if (username !== "admin") {
+                    return false;
+                }
+                if (password !== "12345") {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </div>
+    ​
+
+</body>
+
+</html>
